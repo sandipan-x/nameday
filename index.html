@@ -1,0 +1,425 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>When Is My Name Day? — Name Day Finder | NameDay</title>
+<meta name="description" content="Find your name day, see it on the calendar, and learn the tradition.">
+<link rel="canonical" href="https://nameday.fixoraa.tech/">
+<meta name="robots" content="index, follow">
+<meta property="og:title" content="When Is My Name Day? — Name Day Finder | NameDay">
+<meta property="og:description" content="Find your name day, see it on the calendar, and learn the tradition.">
+<meta property="og:url" content="https://nameday.fixoraa.tech/">
+<meta property="og:type" content="website">
+<script defer src="https://t.fixoraa.tech/track.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Yeseva+One&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebApplication",
+      "name": "NameDay",
+      "url": "https://nameday.fixoraa.tech",
+      "applicationCategory": "Date & Time",
+      "operatingSystem": "Web",
+      "description": "Find your name day, see it on the calendar, and learn the tradition.",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is a name day?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A name day is the feast day of the saint you were named after. In much of Europe — Greece, Poland, Hungary, Sweden, Latvia and others — it is celebrated like a second birthday, with flowers, gatherings and congratulations."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I find my name day?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Search your first name in the finder above. It returns the traditional date and the saint behind it, and marks it on the month calendar. If your name has several saints, pick the date your family or country observes."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is a name day the same as a birthday?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Your birthday marks your birth; your name day marks your patron saint's feast. In countries like Greece and Russia the name day was historically the bigger celebration, and many adults there still treat it that way."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What if my name has no saint or no name day?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Common solutions: celebrate on All Saints' Day (November 1), adopt the closest saint's day, or use your country's official calendar — Latvia and Estonia have assigned days to many modern names. The custom is celebratory, not strict."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why do some names have more than one name day?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Popular saints have multiple feast days (John: June 24 and December 27; Francis: October 4 and December 3), and different countries standardized different ones. The finder lists every match so you can choose your tradition."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do Orthodox name days fall on different dates?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Often, yes. Many Orthodox churches reckon saints' days on the Julian calendar, about 13 days behind the Gregorian dates shown here. Greek, Russian and Serbian families should check their church calendar for the exact day."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+<style>
+:root{
+  --bg:#F9F2FA; --surface:#FFFFFF; --tint:#F0DDF4; --line:#F0DDF4;
+  --accent:#9027A5; --accent-ink:#FFFFFF;
+  --ink:#301F33; --muted:#725478;
+  --footbg:#2c1f30; --footink:#f4eef4; --footmuted:#cdbfcd;
+  --display:'Yeseva One', Georgia, serif; --body:system-ui, -apple-system, 'Segoe UI', sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{font-family:var(--body);background:var(--bg);color:var(--ink);line-height:1.65;font-size:16px}
+.fx-wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+.fx-header{background:var(--surface);border-bottom:3px solid var(--accent);position:sticky;top:0;z-index:50}
+.fx-header .fx-wrap{display:flex;align-items:center;gap:14px;padding:12px 20px;flex-wrap:wrap}
+.fx-logo{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink)}
+.fx-name{font-weight:800;font-size:20px;letter-spacing:-.02em;font-family:var(--display)}
+.fx-nav{margin-left:auto;display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.fx-badge{display:inline-block;padding:7px 14px;border-radius:999px;font-weight:700;font-size:13px}
+.article-sec{margin:40px auto;max-width:780px;padding:0 20px}
+.article-sec h2{font-size:24px;letter-spacing:-.02em;margin:34px 0 12px;font-weight:800;font-family:var(--display)}
+.article-sec p{margin-bottom:14px}
+.article-sec ul,.article-sec ol{margin:0 0 14px 22px}
+.article-sec li{margin-bottom:6px}
+.faq-sec{margin:36px auto;max-width:780px;padding:0 20px}
+.faq-sec h2{font-size:24px;font-weight:800;letter-spacing:-.02em;margin-bottom:16px;font-family:var(--display)}
+.faq-sec details{background:var(--surface);border:2px solid var(--line);border-radius:14px;margin-bottom:10px;overflow:hidden}
+.faq-sec summary{padding:16px 18px;font-weight:700;cursor:pointer;list-style:none;font-size:16px}
+.faq-sec summary::-webkit-details-marker{display:none}
+.faq-sec summary:hover{color:var(--accent)}
+.faq-sec details[open] summary{border-bottom:2px solid var(--line);color:var(--accent)}
+.faq-sec details p{padding:14px 18px;font-size:15px;color:var(--ink)}
+.fx-footer{background:var(--footbg);color:var(--footink);margin-top:44px;padding:40px 0 34px}
+.fx-footer .fx-brand{font-size:22px;font-weight:800;margin-bottom:8px;color:#fff;font-family:var(--display)}
+.fx-footer p{font-size:15px;color:var(--footmuted);max-width:640px;margin-bottom:14px}
+.fx-footer nav{display:flex;gap:18px;margin-bottom:16px;flex-wrap:wrap}
+.fx-footer nav a{color:#fff;font-weight:700;text-decoration:none;border-bottom:2px solid var(--accent)}
+.fx-credit{font-size:14px}
+.fx-credit a{color:var(--accent_ink);font-weight:700}
+@media(max-width:760px){.fx-nav{margin-left:0}}
+
+
+.hero{padding:44px 20px 8px;max-width:800px;margin:0 auto;text-align:center}
+.eyebrow{display:inline-block;font-size:14px;letter-spacing:.24em;text-transform:uppercase;color:var(--accent);margin-bottom:12px}
+.hero h1{font-size:clamp(36px,5.4vw,56px);font-weight:400;margin-bottom:10px}
+.hero p{font-size:18px;color:var(--muted);max-width:620px;margin:0 auto}
+.tool{max-width:800px;margin:28px auto 8px;padding:0 20px}
+.greet{background:#fff;border-radius:18px;box-shadow:0 16px 40px rgba(144,39,165,.14);overflow:hidden;border:1px solid #e6d3ec}
+.greet-top{background:linear-gradient(120deg,var(--accent),#b34fc9);color:#fff;padding:30px 32px;text-align:center;position:relative}
+.greet-top h2{font-weight:400;font-size:30px;margin-bottom:6px}
+.greet-top p{opacity:.92;font-size:15px;max-width:520px;margin:0 auto}
+.greet-top .seal{position:absolute;top:16px;right:20px;width:64px;height:64px;border:2px solid rgba(255,255,255,.7);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:28px;transform:rotate(10deg)}
+.nd-search{display:flex;gap:10px;justify-content:center;margin-top:18px;flex-wrap:wrap}
+.nd-search input{font-size:18px;padding:12px 20px;border-radius:999px;border:2px solid rgba(255,255,255,.6);width:min(340px,80vw);background:rgba(255,255,255,.95);color:var(--ink)}
+.nd-search input:focus{outline:3px solid rgba(255,255,255,.5)}
+.nd-search button{font-size:16px;font-weight:700;padding:12px 26px;border-radius:999px;border:0;background:#fff;color:var(--accent);cursor:pointer}
+.greet-body{padding:28px 32px}
+.nd-result{text-align:center;padding:8px 0 4px}
+.nd-result .big{font-family:var(--display);font-size:52px;color:var(--accent);line-height:1.1}
+.nd-result .sub{color:var(--muted);font-size:16px;margin-top:6px}
+.nd-chips{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;margin-top:14px}
+.nd-chips button{border:2px solid var(--tint);background:var(--tint);color:var(--ink);border-radius:999px;padding:8px 16px;font-size:14px;cursor:pointer}
+.nd-chips button:hover{border-color:var(--accent)}
+.cal-head{display:flex;align-items:center;justify-content:space-between;margin:20px 0 10px}
+.cal-head h3{font-weight:400;font-size:22px}
+.cal-head .mnav{display:flex;gap:8px}
+.cal-head .mnav button{border:2px solid var(--accent);background:#fff;color:var(--accent);border-radius:10px;width:38px;height:38px;font-size:18px;cursor:pointer;font-weight:700}
+.cal-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:6px}
+.cal-grid .dow{font-size:11px;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);text-align:center;padding:4px}
+.cal-grid .day{background:#fbf7fc;border:1px solid #eee2f2;border-radius:10px;min-height:64px;padding:6px;font-size:13px;position:relative}
+.cal-grid .day .n{font-weight:700}
+.cal-grid .day.has{background:var(--tint);border-color:var(--accent);cursor:default}
+.cal-grid .day.has .nm{font-size:11px;color:var(--accent);font-weight:700;display:block;line-height:1.25;margin-top:2px}
+.cal-grid .day.today{box-shadow:0 0 0 2px var(--accent)}
+.cal-grid .day.dim{opacity:.35}
+.nd-trad{background:var(--tint);border-radius:12px;padding:14px 18px;font-size:15px;margin-top:18px}
+.fx-tile{width:46px;height:46px;border-radius:50% 50% 50% 8px;background:linear-gradient(135deg,var(--accent),#c05ad6);color:#fff;display:flex;align-items:center;justify-content:center;font-size:24px}
+.fx-btn{display:inline-block;padding:9px 18px;border-radius:999px;font-weight:700;font-size:14px;text-decoration:none;border:2px solid var(--accent);color:var(--accent);background:#fff;font-family:system-ui}
+.fx-btn.solid{background:var(--accent);color:var(--accent-ink)}
+.fx-badge{background:#fff;color:var(--accent);border:2px dashed var(--accent)}
+@media(max-width:560px){.cal-grid .day{min-height:48px;font-size:11px}.cal-grid .day.has .nm{font-size:9px}.greet-body{padding:20px}}
+
+</style>
+</head>
+<body>
+<header class="fx-header">
+  <div class="fx-wrap">
+    <a class="fx-logo" href="https://nameday.fixoraa.tech/" aria-label="NameDay home">
+      <span class="fx-tile" aria-hidden="true">❦</span>
+      <span class="fx-name">NameDay</span>
+    </a>
+    <nav class="fx-nav" aria-label="Site">
+      <a class="fx-btn" href="https://fixoraa.tech">Home</a>
+      <a class="fx-btn solid" href="https://fixoraa.tech">More Tools</a>
+      <span class="fx-badge">&#8734; Unlimited Free Usage</span>
+    </nav>
+  </div>
+</header>
+<div class="no-print mx-auto max-w-6xl px-4 sm:px-6 pt-4" role="complementary" aria-label="Advertisement">
+  <div class="mx-auto text-center" style="max-width:728px">
+    <span class="block text-[10px] tracking-[0.18em] uppercase text-slate-400 mb-1.5">Advertisement</span>
+    <div class="flex justify-center overflow-hidden">
+      <div class="origin-top scale-[0.44] sm:scale-100 shrink-0">
+        <script>
+          atOptions = { 'key' : '4e68ac77881c17fe128a46565d9a4e8c', 'format' : 'iframe', 'height' : 90, 'width' : 728, 'params' : {} };
+        </script>
+        <script src="https://www.highrevenueformat.com/4e68ac77881c17fe128a46565d9a4e8c/invoke.js"></script>
+      </div>
+    </div>
+  </div>
+</div>
+<main class="fx-wrap">
+  <section class="hero">
+    <span class="eyebrow">A greeting card for your saint's day</span>
+    <h1>When is my name day?</h1>
+    <p>In much of Europe your name day matters as much as your birthday. Search your name, find its day, and see the whole month at a glance.</p>
+  </section>
+  <section class="tool" aria-label="NameDay tool">
+<div class="greet">
+      <div class="greet-top">
+        <div class="seal" aria-hidden="true">❦</div>
+        <h2>The Name Day Card</h2>
+        <p>Search a first name below — we will find its traditional day and mark it on the calendar.</p>
+        <div class="nd-search">
+          <input type="text" id="nd-q" placeholder="e.g. Maria, George, Anna…" aria-label="First name" autocomplete="off">
+          <button type="button" id="nd-go">Find my day</button>
+        </div>
+      </div>
+      <div class="greet-body">
+        <div class="nd-result" id="nd-result" aria-live="polite"></div>
+        <div class="nd-chips" id="nd-chips"></div>
+        <div class="cal-head">
+          <h3 id="nd-mtitle">Month view</h3>
+          <div class="mnav">
+            <button type="button" id="nd-prev" aria-label="Previous month">‹</button>
+            <button type="button" id="nd-next" aria-label="Next month">›</button>
+          </div>
+        </div>
+        <div class="cal-grid" id="nd-cal"></div>
+        <div class="nd-trad" id="nd-trad"></div>
+      </div>
+    </div>
+  </section>
+  <article class="article-sec">
+<h2>What Is a Name Day, Exactly?</h2>
+<p>In much of Europe, your <strong>name day</strong> — the feast day of the saint you were named after — is celebrated with the same enthusiasm many countries reserve for birthdays. Say "Elena" in Greece or "János" in Hungary and people will ask when your name day is, not your birthday. The custom flows from Christian baptism: children were traditionally named after saints, and the saint's feast day became the child's annual celebration. In Orthodox countries the link is even formal — the name day (<em>imeniny</em>) was historically the <em>real</em> celebration, with birthdays a minor affair.</p>
+<p>The practical result is a parallel calendar most Americans have never seen. Diaries and wall calendars in Poland, Hungary, Slovakia, Latvia, Sweden, and Greece print a name or two on <em>every single day</em>. Offices keep lists; colleagues bring flowers and cake when your day comes up. If you have European roots and have never celebrated yours, you have been missing a party that much of the continent takes for granted.</p>
+<h2>How Names Got Their Days</h2>
+<p>The system grew organically over a thousand years. Early Christians commemorated martyrs on the anniversaries of their deaths — their "birthdays into heaven" — and churches kept lists called <strong>martyrologies</strong>. As naming children after saints became the norm (in some eras and places it was effectively required), each person's feast day followed from their name. The calendar filled up: popular saints like John, Mary, Peter, and Catherine accumulated multiple feast days across the year, and different regions picked different ones.</p>
+<p>That is why there is no single global name-day list. <strong>St. Catherine</strong> is November 25 in most of the West but April 29 in Italy (Catherine of Siena). <strong>St. John</strong> has June 24 (his nativity) and December 27 (the Evangelist). National calendars — Sweden's and Finland's are officially published, Latvia's contains over a thousand names — standardize one date per name for civil use. The finder above uses widely recognized Western dates and notes the saint, so you can celebrate confidently and adjust if your family's tradition differs.</p>
+<h2>Country by Country: How It Is Celebrated</h2>
+<p><strong>Greece</strong> may love name days most: the celebrant's home stays open all day, friends drop in unannounced, and sweets and drinks are served to everyone. Your <em>yiorti</em> is announced with "chronia polla" — many years. <strong>Poland's</strong> <em>imieniny</em> flip the hosting: the celebrated person throws the party and provides the vodka, while guests bring flowers. In <strong>Hungary</strong>, name days are so embedded that there are often <em>two</em> per name in the calendar, and coworkers celebrate both.</p>
+<p><strong>Sweden and Finland</strong> print the official name-day list in every almanac; the royal family's name days are flag-flying days. <strong>Latvia</strong> publishes one of the world's longest lists, and Latvians abroad still check it. In <strong>Bulgaria</strong>, name days function as open-house family holidays — St. George's Day (May 6) doubles as a spring festival with lamb and parades. <strong>Spain</strong> celebrates the <em>onomástica</em>, and <strong>Mexico</strong> inherited the custom: many Mexicans celebrate their <em>santo</em> alongside or instead of their birthday.</p>
+<h2>Birthdays vs. Name Days</h2>
+<p>Why did some cultures elevate the name day above the birthday? Partly theology — the saint's feast connects you to your heavenly patron — and partly practicality: in eras of high infant mortality, baptism (and naming) was the certain, recorded event, while birth dates were fuzzier. The Orthodox tradition made it explicit: your <em>imeniny</em> was your spiritual birthday. Even today, many Greeks will tell you the birthday is for children and the name day is for adults.</p>
+<p>The two celebrations have different economics, too. Birthday parties are hosted <em>for</em> you; in several name-day traditions (Poland, Bulgaria, Greece) the celebrant hosts or keeps open house. That makes the name day the more social holiday — less about being celebrated, more about gathering your people. If your calendar only has room for one party a year, much of Europe votes name day.</p>
+<h2>Names With More Than One Day</h2>
+<p>Common names are the trickiest. <strong>Maria/Mary</strong> has the Assumption (August 15), the Holy Name (September 12), the Nativity (September 8), and the Immaculate Conception (December 8), among others — different countries picked different ones. <strong>John</strong> spans June 24 and December 27. <strong>Francis</strong> covers October 4 (Assisi) and December 3 (Xavier). <strong>Teresa</strong> has October 15 (Avila) and September 5 (Calcutta). <strong>Anthony</strong> has January 17 (the Abbot) and June 13 (Padua). The search above lists every match it finds, so you can pick the one your family uses — or celebrate them all, which some enthusiasts genuinely do.</p>
+<p>Orthodox calendars add another layer: many saints' days fall 13 days later than Western ones because they are still reckoned on the Julian calendar. If your family is Greek, Russian, or Serbian Orthodox, check the Orthodox date — your yiorti may be nearly two weeks after the Western listing.</p>
+<h2>What If Your Name Has No Saint?</h2>
+<p>Modern names — invented spellings, surnames-as-first-names, names from other religions — often have no feast day at all. Traditions handle this several ways. Some families pick the closest saint's name (a "Vanessa" might borrow St. Anne's day). Some celebrate on <strong>All Saints' Day, November 1</strong>, the catch-all feast. In Latvia and Estonia, where calendars were expanded deliberately, committees have <em>assigned</em> days to modern names — a charming bureaucratic solution. And some people simply adopt the name day of the saint they feel closest to. The custom is celebratory, not legalistic; nobody checks your baptismal certificate.</p>
+<p>Diaspora families often invent the tradition fresh: pick the saint's day, put it in the family calendar, and start a ritual — a special meal, a small gift, a phone call. Within a generation it feels ancient. That is, after all, how all traditions start.</p>
+<h2>The Calendar View: Reading Your Month</h2>
+<p>The month grid above shows every name day in the database for the displayed month, with today highlighted. It is modeled on the printed calendars of Central Europe, where each day carries its names. Use the arrows to browse — December is crowded (Nicholas, Lucy, Stephen, John the Evangelist all cluster around Christmas), while some summer weeks are quieter. Clicking a name chip jumps the calendar to that name's month, handy when you are planning ahead.</p>
+<p>One pattern you will notice: saints cluster around seasons of church history. Late December gathers the Christmas-adjacent saints; late June collects the apostles (John the Baptist on the 24th, Peter and Paul on the 29th); November is dense with martyrs and medieval saints. The calendar is, among other things, a map of two thousand years of veneration.</p>
+<h2>Gifts, Flowers, and Etiquette</h2>
+<p>Name-day etiquette varies, but the constants are <strong>flowers and something sweet</strong>. In Poland and Hungary, an odd number of flowers (even numbers are for funerals). In Greece, you do not wait for an invitation — you simply show up, and the host is ready. In offices across Central Europe, the celebrant brings cake or pastries for colleagues. Gifts are modest: a bottle, a book, a small token. The unforgivable sin is forgetting — which is exactly why wall calendars print the names, and why this tool exists.</p>
+<p>If you are the celebrant in a hosting tradition, the rule is abundance: more food and drink than seems necessary. Name-day open houses in Greece famously run all day with a rolling cast of visitors. When in doubt, ask a local — but showing up with flowers and congratulations ("Sto lat!" in Polish — "a hundred years!") has never gone wrong.</p>
+<h2>Finding Your Own Name Day Today</h2>
+<p>Type your first name into the card above. If several saints share it, you will see each date with its saint, so you can choose — many people simply take the first one after their birthday, or the one their country observes. Try family members' names too; you may discover that someone's name day is <em>this week</em> and rescue yourself from a forgotten congratulations. The month view lets you scan ahead and plan: name days make excellent excuses for dinner parties, and unlike birthdays, they never surprise you — the saints are nothing if not punctual.</p>
+  </article>
+  <section class="faq-sec" aria-label="Frequently asked questions">
+    <h2>Frequently asked questions</h2>
+    <details><summary>What is a name day?</summary><p>A name day is the feast day of the saint you were named after. In much of Europe — Greece, Poland, Hungary, Sweden, Latvia and others — it is celebrated like a second birthday, with flowers, gatherings and congratulations.</p></details>
+    <details><summary>How do I find my name day?</summary><p>Search your first name in the finder above. It returns the traditional date and the saint behind it, and marks it on the month calendar. If your name has several saints, pick the date your family or country observes.</p></details>
+    <details><summary>Is a name day the same as a birthday?</summary><p>No. Your birthday marks your birth; your name day marks your patron saint's feast. In countries like Greece and Russia the name day was historically the bigger celebration, and many adults there still treat it that way.</p></details>
+    <details><summary>What if my name has no saint or no name day?</summary><p>Common solutions: celebrate on All Saints' Day (November 1), adopt the closest saint's day, or use your country's official calendar — Latvia and Estonia have assigned days to many modern names. The custom is celebratory, not strict.</p></details>
+    <details><summary>Why do some names have more than one name day?</summary><p>Popular saints have multiple feast days (John: June 24 and December 27; Francis: October 4 and December 3), and different countries standardized different ones. The finder lists every match so you can choose your tradition.</p></details>
+    <details><summary>Do Orthodox name days fall on different dates?</summary><p>Often, yes. Many Orthodox churches reckon saints' days on the Julian calendar, about 13 days behind the Gregorian dates shown here. Greek, Russian and Serbian families should check their church calendar for the exact day.</p></details>
+  </section>
+</main>
+<div class="no-print mx-auto max-w-6xl px-4 sm:px-6 pb-4" role="complementary" aria-label="Advertisement">
+  <div class="mx-auto text-center" style="max-width:300px">
+    <span class="block text-[10px] tracking-[0.18em] uppercase text-slate-400 mb-1.5">Advertisement</span>
+    <div class="flex justify-center overflow-hidden">
+      <script>
+      (function(grnp){
+      var d = document,
+          s = d.createElement('script'),
+          l = d.currentScript || d.scripts[d.scripts.length - 1];
+      s.settings = grnp || {};
+      s.src = "\/\/peacefulbicycle.com\/bnXtVJsnd.GElF0oYVWQcY\/Qe\/mf9qu-ZqUtlZk\/PzTHcx1LM\/jWIZwkMTj\/U\/t-NrzmUnyOMsj\/AzydO\/Qx";
+      s.async = true;
+      s.referrerPolicy = 'no-referrer-when-downgrade';
+      l.parentNode.insertBefore(s, l);
+      })({})
+      </script>
+    </div>
+  </div>
+</div>
+<footer class="fx-footer">
+  <div class="fx-wrap">
+    <div class="fx-brand">NameDay</div>
+    <p>NameDay finds the traditional name day for European given names, shows it on a month calendar, and explains the custom country by country.</p>
+    <nav aria-label="Footer">
+      <a href="https://fixoraa.tech">Home</a>
+      <a href="https://fixoraa.tech">More Tools</a>
+    </nav>
+    <p class="fx-credit">Made by <a href="https://fixoraa.tech">Fixoraa</a> &middot; Free forever, no signup.</p>
+  </div>
+</footer>
+<script>
+var NAMEDAYS=[
+{name:"Agnes",month:1,day:21,note:"St Agnes, patron of young girls"},
+{name:"Anthony",month:1,day:17,note:"St Anthony the Abbot"},
+{name:"Vincent",month:1,day:22,note:"St Vincent of Saragossa"},
+{name:"Timothy",month:1,day:26,note:"St Timothy"},
+{name:"Blaise",month:2,day:3,note:"St Blaise, blessing of throats"},
+{name:"Agatha",month:2,day:5,note:"St Agatha of Sicily"},
+{name:"Valentine",month:2,day:14,note:"St Valentine"},
+{name:"Peter",month:2,day:22,note:"Chair of St Peter"},
+{name:"David",month:3,day:1,note:"St David, patron of Wales"},
+{name:"Patrick",month:3,day:17,note:"St Patrick, patron of Ireland"},
+{name:"Joseph",month:3,day:19,note:"St Joseph"},
+{name:"Alexander",month:3,day:18,note:"St Alexander of Jerusalem"},
+{name:"George",month:4,day:23,note:"St George, patron of England"},
+{name:"Mark",month:4,day:25,note:"St Mark the Evangelist"},
+{name:"Catherine",month:4,day:29,note:"St Catherine of Siena"},
+{name:"Philip",month:5,day:1,note:"St Philip the Apostle"},
+{name:"Florian",month:5,day:4,note:"St Florian, patron of firefighters"},
+{name:"Sophie",month:5,day:25,note:"St Mary Magdalene de' Pazzi"},
+{name:"Anthony",month:6,day:13,note:"St Anthony of Padua"},
+{name:"John",month:6,day:24,note:"Nativity of St John the Baptist"},
+{name:"Peter",month:6,day:29,note:"Sts Peter and Paul"},
+{name:"Paul",month:6,day:29,note:"Sts Peter and Paul"},
+{name:"Thomas",month:7,day:3,note:"St Thomas the Apostle"},
+{name:"Benedict",month:7,day:11,note:"St Benedict of Nursia"},
+{name:"Margaret",month:7,day:20,note:"St Margaret of Antioch"},
+{name:"James",month:7,day:25,note:"St James the Greater"},
+{name:"Anne",month:7,day:26,note:"St Anne, mother of Mary"},
+{name:"Martha",month:7,day:29,note:"St Martha of Bethany"},
+{name:"Ignatius",month:7,day:31,note:"St Ignatius of Loyola"},
+{name:"Dominic",month:8,day:8,note:"St Dominic"},
+{name:"Lawrence",month:8,day:10,note:"St Lawrence"},
+{name:"Clare",month:8,day:11,note:"St Clare of Assisi"},
+{name:"Mary",month:8,day:15,note:"Assumption of Mary"},
+{name:"Helen",month:8,day:18,note:"St Helena"},
+{name:"Rose",month:8,day:23,note:"St Rose of Lima"},
+{name:"Monica",month:8,day:27,note:"St Monica"},
+{name:"Augustine",month:8,day:28,note:"St Augustine of Hippo"},
+{name:"Teresa",month:9,day:5,note:"St Teresa of Calcutta"},
+{name:"Maria",month:9,day:12,note:"Holy Name of Mary"},
+{name:"Matthew",month:9,day:21,note:"St Matthew the Apostle"},
+{name:"Michael",month:9,day:29,note:"St Michael the Archangel"},
+{name:"Jerome",month:9,day:30,note:"St Jerome"},
+{name:"Francis",month:10,day:4,note:"St Francis of Assisi"},
+{name:"Teresa",month:10,day:15,note:"St Teresa of Avila"},
+{name:"Luke",month:10,day:18,note:"St Luke the Evangelist"},
+{name:"Ursula",month:10,day:21,note:"St Ursula"},
+{name:"Simon",month:10,day:28,note:"St Simon the Apostle"},
+{name:"Jude",month:10,day:28,note:"St Jude Thaddeus"},
+{name:"Charles",month:11,day:4,note:"St Charles Borromeo"},
+{name:"Martin",month:11,day:11,note:"St Martin of Tours"},
+{name:"Elizabeth",month:11,day:19,note:"St Elizabeth of Hungary"},
+{name:"Cecilia",month:11,day:22,note:"St Cecilia, patron of music"},
+{name:"Catherine",month:11,day:25,note:"St Catherine of Alexandria"},
+{name:"Andrew",month:11,day:30,note:"St Andrew the Apostle"},
+{name:"Francis",month:12,day:3,note:"St Francis Xavier"},
+{name:"Barbara",month:12,day:4,note:"St Barbara"},
+{name:"Nicholas",month:12,day:6,note:"St Nicholas"},
+{name:"Lucy",month:12,day:13,note:"St Lucy"},
+{name:"Stephen",month:12,day:26,note:"St Stephen"},
+{name:"John",month:12,day:27,note:"St John the Evangelist"}
+];
+var ND_MONTHS=["January","February","March","April","May","June","July","August","September","October","November","December"];
+function ndDateStr(m,d){ return ND_MONTHS[m-1]+" "+d; }
+function findNameDay(query){
+  var q=String(query||"").trim().toLowerCase();
+  if(!q) return {query:query,count:0,matches:[]};
+  var scored=[];
+  NAMEDAYS.forEach(function(n){
+    var ln=n.name.toLowerCase(), s=-1;
+    if(ln===q) s=0; else if(ln.indexOf(q)===0) s=1; else if(ln.indexOf(q)>0) s=2;
+    if(s>=0) scored.push({s:s,n:n});
+  });
+  scored.sort(function(a,b){ return a.s-b.s || (a.n.name<b.n.name?-1:1) || a.n.month-b.n.month; });
+  return {query:query,count:scored.length,
+    matches:scored.map(function(x){ return {name:x.n.name,month:x.n.month,day:x.n.day,dateStr:ndDateStr(x.n.month,x.n.day),note:x.n.note}; })};
+}
+function namesInMonth(m){
+  return NAMEDAYS.filter(function(n){return n.month===m;})
+    .sort(function(a,b){return a.day-b.day;})
+    .map(function(n){ return {name:n.name,month:n.month,day:n.day,dateStr:ndDateStr(n.month,n.day),note:n.note}; });
+}
+if(typeof document!=='undefined'){
+var ndQ=document.getElementById('nd-q'), cm=new Date().getMonth()+1, cy=new Date().getFullYear();
+var TRADS={1:"In Hungary and Slovakia, name days are printed in every calendar and celebrated at work with flowers.",2:"Greece celebrates name days more than birthdays — if your saint's day comes, expect a house full of guests.",3:"Poland's <em>imieniny</em> are a big deal: the celebrant hosts, and guests bring flowers and vodka.",4:"Sweden and Finland publish an official name-day calendar; flags fly for royal name days.",5:"In Latvia, name days are a public custom with a published calendar of 1,000+ names.",6:"Bulgaria treats name days as family holidays — the host provides the feast, guests bring gifts.",7:"Spain celebrates <em>onomástica</em>, especially for saints like San José and La Virgen del Carmen.",8:"France quietly keeps <em>fête du prénom</em>; calendars still print the saint of each day.",9:"Russia's <em>imeniny</em> were once more important than birthdays, tied to Orthodox baptismal names.",10:"Italy celebrates <em>onomastico</em> with a toast — especially for very common saints' names.",11:"Portugal and the Czech Republic both publish official name-day calendars used in diaries.",12:"In Austria and Bavaria, the name day often beats the birthday for family celebration."};
+function ndShowResult(r){
+  var el=document.getElementById('nd-result'), ch=document.getElementById('nd-chips');
+  ch.innerHTML='';
+  if(!r.count){ el.innerHTML='<div class="big">No match</div><div class="sub">Try another spelling — the list covers traditional European saint names.</div>'; return; }
+  var f=r.matches[0];
+  el.innerHTML='<div class="big">'+f.name+' · '+f.dateStr+'</div><div class="sub">'+f.note+'. '+(r.count>1?('Also: '+r.matches.slice(1,4).map(function(x){return x.name+' ('+x.dateStr+')';}).join(', ')+(r.count>4?' …':'')+'.'):'')+'</div>';
+  r.matches.slice(0,8).forEach(function(x){var b=document.createElement('button');b.textContent=x.name+' · '+x.dateStr;b.addEventListener('click',function(){cm=x.month;ndCal();});ch.appendChild(b);});
+  cm=f.month; ndCal();
+}
+function ndCal(){
+  var first=new Date(cy,cm-1,1), start=(first.getDay()+6)%7, dim=new Date(cy,cm,0).getDate(), prevDim=new Date(cy,cm-1,0).getDate();
+  document.getElementById('nd-mtitle').textContent=["January","February","March","April","May","June","July","August","September","October","November","December"][cm-1]+' '+cy;
+  var g=document.getElementById('nd-cal'); g.innerHTML='';
+  ['Mon','Tue','Wed','Thu','Fri','Sat','Sun'].forEach(function(d){var s=document.createElement('div');s.className='dow';s.textContent=d;g.appendChild(s);});
+  var names={}; namesInMonth(cm).forEach(function(n){(names[n.day]=names[n.day]||[]).push(n.name);});
+  var today=new Date();
+  for(var i=0;i<42;i++){
+    var cell=document.createElement('div'), dn, dimCls=false;
+    if(i<start){dn=prevDim-start+1+i;dimCls=true;} else if(i<start+dim){dn=i-start+1;} else {dn=i-start-dim+1;dimCls=true;}
+    cell.className='day'+(dimCls?' dim':'');
+    var nm=(!dimCls&&names[dn])?names[dn]:null;
+    cell.innerHTML='<span class="n">'+dn+'</span>'+(nm?'<span class="nm">'+nm.slice(0,3).join(', ')+(nm.length>3?' +'+(nm.length-3):'')+'</span>':'');
+    if(nm) cell.classList.add('has');
+    if(!dimCls&&dn===today.getDate()&&cm===today.getMonth()+1&&cy===today.getFullYear()) cell.classList.add('today');
+    if(i>=start+dim) break;
+    g.appendChild(cell);
+  }
+  document.getElementById('nd-trad').innerHTML=TRADS[cm]||'';
+}
+document.getElementById('nd-go').addEventListener('click',function(){ndShowResult(findNameDay(ndQ.value));});
+ndQ.addEventListener('keydown',function(e){if(e.key==='Enter')ndShowResult(findNameDay(ndQ.value));});
+document.getElementById('nd-prev').addEventListener('click',function(){cm--;if(cm<1){cm=12;cy--;}ndCal();});
+document.getElementById('nd-next').addEventListener('click',function(){cm++;if(cm>12){cm=1;cy++;}ndCal();});
+ndCal();
+ndShowResult(findNameDay('Maria'));
+}
+</script>
+</body>
+</html>
